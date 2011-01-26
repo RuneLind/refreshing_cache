@@ -1,0 +1,6 @@
+Refreshing cache
+A refreshing cache is a resource-thin in-memory cache. It is used when memory is scarce and the values of the dictionary change from time to time.
+
+The cache holds key-value data until it's stale (defined by a time limit). If it doesn't yet hold data, it calls another, in practice "slower" object (acting as a "computer", think of a remote service) to get that data, puts it in the cache and returns it. The cache has a maximum number of items, and when the cache is full a new value put into it means the least-recently-used key,value pair has to be descarded.
+
+Problem statement contributed by Rick Mugridge.
